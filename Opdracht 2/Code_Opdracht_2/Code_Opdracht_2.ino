@@ -1,17 +1,17 @@
 // defineert welke pinnen er worden gebruikt.
-int pins[] = {2,3,4,5,6,7,8,9}; 
+const int pins[] = {2,3,4,5,6,7,8,9}; 
 
 // berekend de groote van de pins array. 
 // min 1 omdat arrays starten bij 1.
-int pins_size = sizeof(pins) / sizeof(pins[0]) - 1;
+const int pins_size = sizeof(pins) / sizeof(pins[0]) - 1;
 
 // defineert hoeveel pinnen er extra moeten blijven branden 
-int extra = 3;
+const int extra = 3;
 
 // bereken de loop size door de grote van de array te berekenen
 // plus de extra waarde toe te voegen. 
 // min 1 aangezien de een array bij nul moet beginnen.
-int loop_size = pins_size + extra;
+const int loop_size = pins_size + extra;
 
 void setup() {
   // zet alle pinnen naar output modus.
