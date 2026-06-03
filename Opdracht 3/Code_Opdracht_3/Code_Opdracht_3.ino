@@ -1,11 +1,11 @@
 // defineert de led pinnen.
-int led_pins[] = {8, 10}; 
+const int led_pins[] = {8, 10}; 
 
 // berekend de groote van de pins array.
-int led_pins_size = sizeof(led_pins) / sizeof(led_pins[0]) - 1; 
+const int led_pins_size = sizeof(led_pins) / sizeof(led_pins[0]) - 1; 
 
 // defineert de knop pin.
-int btn_pin = 12;
+const int btn_pin = 12;
 
 // houd bij hoe vaak de knop is ingedrukt.
 int pressed_counter = 0;
