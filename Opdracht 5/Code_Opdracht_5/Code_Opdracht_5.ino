@@ -39,9 +39,8 @@ void loop()
   // als de eerste knop zijn ingedrukt, wordt de 
   // control servo functie uitgevoerd, 
   // met een delay van 5 seconden en 5 seconden.
-  else if(digitalRead(btn_1) == HIGH) {
+  if(digitalRead(btn_1) == HIGH) {
     control_servo(5000, 5000);
-    Serial.println(current_angle);
   }
   
   // als de tweede knop zijn ingedrukt, wordt de 
@@ -52,7 +51,7 @@ void loop()
   }
 }
 
-void control_servo(int ms1, int ms2){
+void control_servo(float ms1, float ms2){
   // wissel de target angle een van de waarde van de target angles.
   // 0 en 120.
   if(target_angle == current_angle) {
@@ -74,7 +73,17 @@ void control_servo(int ms1, int ms2){
     
     // bereken een delay gebaseerd op de eerste milliseconde waarde
     // gedeeld door de tweede van de target angles.
-    delay(ms1 / target_angles[1]);
+    int delay1 = ms1 / target_angles[1];
+    
+    // bereken hoeveel microseconden er 
+    // nog overblijven na het eerste delay.
+    int micro_delay1 = (ms1 * 1000 / target_angles[1]) - delay1 * 1000;
+    
+    // voer de hele miliseconden delay uit.
+    delay(delay1);
+    
+    // voer het overgebleven microseconde delay uit.
+    delayMicroseconds(micro_delay1);
   }
     
   // draai naar links zolang de current angle meer is 
@@ -88,6 +97,16 @@ void control_servo(int ms1, int ms2){
     
     // bereken een delay gebaseerd op de tweede milliseconde waarde
     // gedeeld door de tweede van de target angles.
-    delay(ms2 / target_angles[1]);
+    int delay2 = ms2 / target_angles[1];
+    
+    // bereken hoeveel microseconden er 
+    // nog overblijven na het eerste delay.
+    int micro_delay2 = (ms2 * 1000 / target_angles[1]) - delay2 * 1000;
+    
+    // voer de hele miliseconden delay uit.
+    delay(delay2);
+    
+    // voer het overgebleven microseconde delay uit.
+    delayMicroseconds(micro_delay2);
   }
 }
