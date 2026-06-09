@@ -73,7 +73,7 @@ void control_servo(float ms1, float ms2){
     
     // bereken een delay gebaseerd op de eerste milliseconde waarde
     // gedeeld door de tweede van de target angles.
-    int delay1 = ms1 / target_angles[1];
+    int delay1 = floor(ms1 / target_angles[1]);
     
     // bereken hoeveel microseconden er 
     // nog overblijven na het eerste delay.
@@ -97,7 +97,7 @@ void control_servo(float ms1, float ms2){
     
     // bereken een delay gebaseerd op de tweede milliseconde waarde
     // gedeeld door de tweede van de target angles.
-    int delay2 = ms2 / target_angles[1];
+    int delay2 = floor(ms2 / target_angles[1]);
     
     // bereken hoeveel microseconden er 
     // nog overblijven na het eerste delay.
