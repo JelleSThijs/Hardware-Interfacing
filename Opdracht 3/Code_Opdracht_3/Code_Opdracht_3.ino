@@ -32,10 +32,12 @@ void loop()
     pressed_counter ++;
     digitalWrite(led_pins[(pressed_counter + 1) % 2], HIGH);
     digitalWrite(led_pins[pressed_counter % 2], LOW);
-    delay(50);
   }
   
   // zet de laatste invoer naar de huidige invoer 
   // om ingedrukt houden te ondersteunen. 
   last_input = current_input;
+  
+  // voeg een delay van 50ms toe om dubbelle invoer te voorkomen.
+  delay(50);
 }
