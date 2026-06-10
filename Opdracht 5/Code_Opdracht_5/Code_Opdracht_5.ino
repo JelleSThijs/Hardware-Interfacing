@@ -39,7 +39,7 @@ void loop()
   // als de eerste knop zijn ingedrukt, wordt de 
   // control servo functie uitgevoerd, 
   // met een delay van 5 seconden en 5 seconden.
-  if(digitalRead(btn_1) == HIGH) {
+  else if(digitalRead(btn_1) == HIGH) {
     control_servo(5000, 5000);
   }
   
