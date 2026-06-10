@@ -35,10 +35,10 @@ void setup()
   
   // schrijf de standaard tekst op het scherm.
   lcd.setCursor(0,0);
-  lcd.print("Tijd: 00:00:00.0");
+  lcd.print("Tijd:   00:00:00");
   
   lcd.setCursor(0,1);
-  lcd.print("Lap:  00:00:00.0");
+  lcd.print("Lap:    00:00:00");
   
 }
 
@@ -53,10 +53,10 @@ void loop(){
     
     // schrijf de standaard tekst terug op het scherm.
     lcd.setCursor(0,0);
-    lcd.print("Tijd: 00:00:00.0");
+    lcd.print("Tijd:   00:00:00");
   
     lcd.setCursor(0,1);
-    lcd.print("Lap:  00:00:00.0");
+    lcd.print("Lap:    00:00:00");
   }
   
   if(digitalRead(btn_1) == HIGH){
@@ -70,7 +70,7 @@ void loop(){
     // als er voor precies 2 seconden (20 * 100ms) op de knop 
     // is gedrukt. dan wordt de lap op het scherm geschreven.
     if(held_time == 20){
-      lcd.setCursor(6,1);
+      lcd.setCursor(8,1);
       lcd.print(format_timer());
     }
   // reset de held_time variable wanneer de knop wordt losgelaten.
@@ -81,20 +81,23 @@ void loop(){
     run_timer = false;
   }
   
-  
   // deze if statment houd de tijd bij 
-  // zolang als run_timer true is.
+  // zolang als run_timer true is en er een seconden voorbij is.
   if(run_timer == true) {
-    // voeg 0.1 seconden bij de timer toe
+    // voeg 0.1 (100 ms) seconden bij de timer toe.
     time += 0.1;
     
-    // zet de nieuwe tijd op het scherm.
-    lcd.setCursor(6,0);
-    lcd.print(format_timer());
+    
+    // elke seconden (10 * 100ms)
+    if((int)(time * 10) % 10 == 0){
+      // zet de nieuwe tijd op het scherm.
+      lcd.setCursor(8,0);
+      lcd.print(format_timer());
+    }
+    
+    // wacht voor 0.1 seconden (100 ms).
+    delay(100);
   }
-  
-  // wacht voor 100ms (0.1 seconden).
-  delay(100);
 }
 
 String format_timer() {
@@ -106,11 +109,10 @@ String format_timer() {
   int h = (int)time / 3600;
   int m = (int)time % 3600 / 60;
   int s = (int)time % 3600 % 60;
-  int dec = (int)(time * 10) % 10;
   
   // maak een reeks van characters de variable op deze manier:
   // uur:minuut:seconden.decimaal
-  sprintf(string,"%02d:%02d:%02d.%d", h, m, s, dec);
+  sprintf(string,"%02d:%02d:%02d", h, m, s);
   
   // zet de reeks van characters om in een string.
   return String(string);
