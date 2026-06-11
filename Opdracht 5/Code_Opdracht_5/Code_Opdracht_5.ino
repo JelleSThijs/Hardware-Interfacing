@@ -32,26 +32,29 @@ void loop()
 { 
   // als beide knop zijn ingedrukt, wordt de control servo functie
   // uitgevoerd, met een delay van 5 seconden en 0,5 seconden.
+  // wacht 2 seconden als de target angle is bereikt.
   if(digitalRead(btn_1) == HIGH && digitalRead(btn_2) == HIGH){
-  	control_servo(5000, 500);
+  	control_servo(5000, 500, 2000);
   }
   
   // als de eerste knop zijn ingedrukt, wordt de 
   // control servo functie uitgevoerd, 
   // met een delay van 5 seconden en 5 seconden.
+  // wacht niet.
   else if(digitalRead(btn_1) == HIGH) {
-    control_servo(5000, 5000);
+    control_servo(5000, 5000, 0);
   }
   
   // als de tweede knop zijn ingedrukt, wordt de 
   // control servo functie uitgevoerd, 
-  // met een delay van 0,5 seconden en 0,5 seconden.
+  // met een delay van 0,5 seconden en 0,5 seconden. 
+  // wacht niet.
   else if(digitalRead(btn_2) == HIGH) {
-    control_servo(500, 500);
+    control_servo(500, 500, 0);
   }
 }
 
-void control_servo(float ms1, float ms2){
+void control_servo(float ms1, float ms2, int delay_ms){
   // wissel de target angle een van de waarde van de target angles.
   // 0 en 120.
   if(target_angle == current_angle) {
@@ -60,6 +63,12 @@ void control_servo(float ms1, float ms2){
     
     // zet target angle als een van de 2 taget angles.
     target_angle = target_angles[ta_counter % 2];
+    
+    // wacht voor een tijd wanneer 
+    // de servo naar de target angle is gedraaid.
+    if(ta_counter % 2 == 0){
+      delay(delay_ms);
+    } 
   }
   
   // draai naar rechts zolang de current angle minder is 
