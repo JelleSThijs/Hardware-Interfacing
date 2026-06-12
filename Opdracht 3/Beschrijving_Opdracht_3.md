@@ -21,8 +21,8 @@ ___
 4. Sluit de `min` pinnen van de ledjes aan op de `min` rij van het breadboard.
 5. Sluit de ene kant van de `knop` aan op de `plus` rij van het breadboard.
 6. Sluit de andere kant van de `knop` aan op de `12` poort van de arduino.
-6. Sluit ook de andere kant van de `knop` aan op de ene kant van de 10K Ohm weerstand.
-7. Sluit tot slot de andere kant van de 10K Ohm weerstand aan op de `min` rij van het breadboard.
+7. Sluit ook de andere kant van de `knop` aan op de ene kant van de 10K Ohm weerstand.
+8. Sluit tot slot de andere kant van de 10K Ohm weerstand aan op de `min` rij van het breadboard.
 
 
 ## De methode
