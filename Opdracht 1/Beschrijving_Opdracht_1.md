@@ -1,6 +1,6 @@
 # Opdracht 1 - Beschrijving
 ## De inleiding
-Voor deze opdracht moeten 2 ledjes om en om aan te zetten. De ledjes moeten elke 1,5 seconden wisselen.
+Voor deze opdracht moeten 2 ledjes om en om aangezet worden. De ledjes moeten elke 1,5 seconden wisselen.
 
 ## De benodigde componenten
 - Arduino Uno R3
