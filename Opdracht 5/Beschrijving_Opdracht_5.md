@@ -6,7 +6,7 @@ Voor deze opdracht moeten 2 ledjes om en om aangezet worden. De ledjes moeten wi
 - Arduino Uno R3
 - Servo 1x
 - Knop 2x
-- Weerstand 10K Ohm 1x
+- Weerstand 10K Ohm 2x
 
 ## De opbouw
 ![Afbeelding Tinkercad opdracht 5](https://github.com/JelleSThijs/Hardware-Interfacing/blob/ebe122169427af926f15467cd4c331a0081c4dc6/Opdracht%205/Tinkercad_Opdracht_5.png?raw=true)
