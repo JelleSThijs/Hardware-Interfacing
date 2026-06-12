@@ -17,7 +17,7 @@ ___
 2. Sluit de ene kant van de `knoppen` aan op de `plus` rij van het breadboard.
 3. Sluit de andere kant van de `knoppen` aan op de `6` en `7` poorten van de arduino.
 4. Sluit ook de andere kant van de `knoppen` aan op de ene kant van de `10K Ohm` weerstanden.
-5. Sluit tot slot de andere kant van de `10K Ohm` weerstanden aan op de `min` rij van het breadboard.
+5. Sluit de andere kant van de `10K Ohm` weerstanden aan op de `min` rij van het breadboard.
 6. Sluit de `rode en bruine draad` van de servo aan op de `plus` en `min` rijen van het breadboard.
 7. Sluit tot slot de `oranje draad` van de servo aan op de `11` poort van de arduino.
 
