@@ -13,9 +13,9 @@ Voor deze opdracht moeten 2 ledjes om en om aan te zetten. De ledjes moeten elke
 ___
 
 1. Sluit de `5 volt` pin en `Grond` pin van de arduino aan op de `plus` en `min` rijen van het breadboard. 
-2. Sluit poort `10` en `13` aan op de ene kant van de weerstanden.
+2. Sluit poort `10` en `13` van de arduino aan op de ene kant van de weerstanden.
 3. Sluit de andere kant van de weerstanden aan op de `plus` pinnen van de ledjes.
-4. Sluit tot slot de `min` pinnen aan op de `min` rij van het breadboard.
+4. Sluit tot slot de `min` pinnen van de ledjes aan op de `min` rij van het breadboard.
 
 
 ## De methode
