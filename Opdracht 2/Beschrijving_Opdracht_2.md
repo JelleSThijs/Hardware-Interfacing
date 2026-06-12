@@ -1,4 +1,4 @@
-# Opdracht 1 - Beschrijving
+# Opdracht 2 - Beschrijving
 ## De inleiding
 Voor deze opdracht moeten 8 ledjes in een golvende beweging heen en weer aan en uit zetten. Dit betekend dat het licht, van rechts naar links, naar rechts beweegt.
 
