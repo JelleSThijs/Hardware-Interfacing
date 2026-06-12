@@ -46,5 +46,5 @@ Voor elk chat bericht is het volgende toegevoegd zodat er geen nieuwe code wordt
 
 
 ## De bronnenlijst
-Opdracht 1 en 2 op Brightspace - https://brightspace.avans.nl/d2l/le/lessons/261180/topics/2025663
+Opdracht 1 en 2 op Brightspace - https://brightspace.avans.nl/d2l/le/lessons/261180/topics/2025663 <br>
 Workshop 1 - https://brightspace.adainforma.tk/lessons/inf/2024_bp4_hwi_01/
