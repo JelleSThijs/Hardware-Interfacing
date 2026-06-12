@@ -1,6 +1,17 @@
-# Opdracht 3 - Beschrijving
+# Opdracht 5 - Beschrijving
 ## De inleiding
-Voor deze opdracht moeten 2 ledjes om en om aangezet worden. De ledjes moeten wisselen elke keer als er op de knop wordt gedrukt.
+Op de Arduino zijn 2 knoppen en 1 servo aangesloten.
+
+Zolang op knop 1 wordt gedrukt draait een
+servomotor van 0° naar 120° in 5 seconden. En dan terug naar 0° in 5 seconden.
+
+Zolang op knop 2 wordt gedrukt draait een
+servomotor van 0° naar 120° in 0.5 seconden. En dan terug naar 0° in 0.5 seconden.
+
+Als beide knoppen tegelijk worden ingedrukt, dan zal
+de servomotor in 5 seconden van 0° naar 120° draaien, 2 seconden wachten, en vervolgens in 0.5 seconden terugdraaien naar 0°.
+
+De Beweging van de servo moet met maar een functie worden gedaan.
 
 ## De benodigde componenten
 - Arduino Uno R3
