@@ -38,7 +38,7 @@ Er worden eerst een aantal variablen gemaakt buiten de `setup()` en `loop()`, zo
 - Maak de variable `last_input` waarin wordt bijgehouden wat de vorige staat van de knop.
 
 Voer de volgende code een keer uit in de `setup()` functie
-- Zet de pinmodus van alle pinnen in de `led_pins` array naar `OUTPUT` (uitvoer) modus door gebruik te maken van een `for loop` met de grote van `led_pins_size`. Hierdoor worden de pinnen maar een keer aan het begin ingesteld.
+- Zet de pinmodus van alle pinnen in de `led_pins` array naar `OUTPUT` (uitvoer) modus door gebruik te maken van een `for loop` met de grote van `led_pins_size`.
 - Zet de pinmodus van de `btn_pin` naar `INPUT` (invoer) modus.
 
 Voer constant de `loop()` functie uit. De volgende code word in die loop uitgevoerd:
